@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket Club India – Join Our Free Cricket Community</title>
+  <meta name="description" content="Join India's most passionate free cricket club. Get live IPL updates, T20 match discussions, cricket tips, and connect with thousands of cricket lovers on WhatsApp & Telegram." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green-dark: #0a4a1e;
+      --green-mid:  #136b2c;
+      --green-bright: #1db954;
+      --gold:       #f5a623;
+      --gold-light: #ffd166;
+      --cream:      #fdf8ee;
+      --off-white:  #f7f3e9;
+      --text-dark:  #0d1b0f;
+      --text-muted: #4a6b53;
+      --wa-green:   #25d366;
+      --wa-dark:    #128c47;
+      --tg-blue:    #229ed9;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Mulish', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
+
+    /* TOPBAR */
+    .topbar { background: var(--green-dark); color: var(--gold-light); text-align: center; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; padding: 9px 16px; text-transform: uppercase; }
+    .topbar span { color: #fff; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,74,30,0.97); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 64px; box-shadow: 0 2px 24px rgba(0,0,0,0.3); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo .ball { width: 36px; height: 36px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #e63946, #8b0000); box-shadow: 0 2px 12px rgba(230,57,70,0.5); position: relative; flex-shrink: 0; }
+    .nav-logo .ball::after { content: ''; position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 1.5px; height: 20px; background: rgba(255,255,255,0.35); border-radius: 2px; }
+    .nav-logo-text { font-family: 'Teko', sans-serif; font-size: 1.5rem; font-weight: 600; color: #fff; letter-spacing: 0.03em; line-height: 1; }
+    .nav-logo-text span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 10px; }
+    .nav-btn { display: flex; align-items: center; gap: 7px; color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 800; transition: transform 0.15s, box-shadow 0.15s; }
+    .nav-btn svg { width: 16px; height: 16px; fill: #fff; flex-shrink: 0; }
+    .nav-btn.wa { background: var(--wa-green); box-shadow: 0 4px 16px rgba(37,211,102,0.4); }
+    .nav-btn.wa:hover { background: var(--wa-dark); transform: translateY(-1px); }
+    .nav-btn.tg { background: var(--tg-blue); box-shadow: 0 4px 16px rgba(34,158,217,0.4); }
+    .nav-btn.tg:hover { background: #1a8bbf; transform: translateY(-1px); }
+
+    /* HERO */
+    .hero { min-height: 85vh; background: linear-gradient(160deg, rgba(10,74,30,0.93) 0%, rgba(19,107,44,0.87) 60%, rgba(0,0,0,0.72) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cellipse cx='400' cy='520' rx='380' ry='120' fill='none' stroke='%23ffffff11' stroke-width='3'/%3E%3Crect x='80' y='80' width='640' height='440' rx='4' fill='none' stroke='%23ffffff07' stroke-width='2'/%3E%3Cline x1='400' y1='80' x2='400' y2='520' stroke='%23ffffff08' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='300' r='60' fill='none' stroke='%23ffffff0a' stroke-width='2'/%3E%3C/svg%3E") center/cover no-repeat; display: grid; place-items: center; text-align: center; padding: 90px 5% 70px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 70px; background: var(--cream); clip-path: ellipse(56% 100% at 50% 100%); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,166,35,0.18); border: 1px solid rgba(245,166,35,0.5); color: var(--gold-light); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 50px; margin-bottom: 20px; animation: fadeDown 0.6s ease both; }
+    .hero-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(0.8); } }
+    .hero h1 { font-family: 'Teko', sans-serif; font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 700; color: #fff; line-height: 0.95; letter-spacing: -0.01em; margin-bottom: 18px; animation: fadeDown 0.7s 0.1s ease both; }
+    .hero h1 .accent { color: var(--gold); }
+    .hero h1 .line2 { display: block; color: var(--green-bright); }
+    .hero p { font-size: clamp(0.95rem, 2vw, 1.15rem); color: rgba(255,255,255,0.82); max-width: 540px; margin: 0 auto 32px; line-height: 1.6; font-weight: 500; animation: fadeDown 0.7s 0.2s ease both; }
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: fadeDown 0.7s 0.3s ease both; }
+    .btn-wa { display: inline-flex; align-items: center; gap: 10px; background: var(--wa-green); color: #fff; text-decoration: none; padding: 15px 30px; border-radius: 50px; font-size: 1rem; font-weight: 800; box-shadow: 0 6px 28px rgba(37,211,102,0.45); transition: transform 0.15s, box-shadow 0.15s; }
+    .btn-wa:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 36px rgba(37,211,102,0.55); }
+    .btn-wa svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
+    .btn-tg { display: inline-flex; align-items: center; gap: 10px; background: var(--tg-blue); color: #fff; text-decoration: none; padding: 15px 30px; border-radius: 50px; font-size: 1rem; font-weight: 800; box-shadow: 0 6px 28px rgba(34,158,217,0.45); transition: transform 0.15s, box-shadow 0.15s; }
+    .btn-tg:hover { transform: translateY(-2px) scale(1.02); }
+    .btn-tg svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
+    .hero-stats { margin-top: 48px; display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; animation: fadeDown 0.7s 0.4s ease both; }
+    .stat { text-align: center; }
+    .stat strong { display: block; font-family: 'Teko', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .stat span { font-size: 0.78rem; color: rgba(255,255,255,0.65); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    @keyframes fadeDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+
+    /* TICKER */
+    .ticker-wrap { background: var(--gold); overflow: hidden; padding: 10px 0; }
+    .ticker { display: flex; width: max-content; animation: ticker 30s linear infinite; }
+    .ticker-item { font-family: 'Teko', sans-serif; font-size: 1rem; font-weight: 600; color: var(--green-dark); letter-spacing: 0.05em; padding: 0 28px; white-space: nowrap; }
+    .ticker-item::after { content: '●'; margin-left: 28px; color: var(--green-mid); font-size: 0.6em; }
+    @keyframes ticker { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+    /* VIDEO SECTION */
+    .videos-section { background: var(--green-dark); padding: 70px 5%; }
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; margin-top: 40px; }
+    .video-card { border-radius: 14px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; display: block; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .video-card:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgba(0,0,0,0.45); }
+    .play-ring { position: relative; display: flex; align-items: center; justify-content: center; }
+    .play-ring::before { content: ''; position: absolute; width: 80px; height: 80px; border-radius: 50%; border: 2px solid rgba(245,166,35,0.4); animation: ring-pulse 2s ease-in-out infinite; }
+    @keyframes ring-pulse { 0%,100% { transform:scale(1); opacity:0.6; } 50% { transform:scale(1.25); opacity:0; } }
+    .play-btn { width: 58px; height: 58px; border-radius: 50%; background: rgba(245,166,35,0.92); display: grid; place-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.4); transition: transform 0.2s, background 0.2s; }
+    .video-card:hover .play-btn { background: var(--gold); transform: scale(1.1); }
+    .play-btn svg { width: 22px; height: 22px; fill: var(--green-dark); margin-left: 3px; }
+
+    .videos-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
+
+    /* WHY JOIN */
+    .why { background: var(--off-white); padding: 70px 5%; }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 40px; }
+    .why-card { background: #fff; border: 1px solid rgba(0,0,0,0.07); border-radius: 16px; padding: 24px; position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.09); }
+    .why-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--green-bright), var(--gold)); }
+    .why-icon { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, var(--green-dark), var(--green-mid)); display: grid; place-items: center; margin-bottom: 14px; font-size: 1.3rem; }
+    .why-card h3 { font-family: 'Teko', sans-serif; font-size: 1.35rem; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+    .why-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* HOW IT WORKS */
+    .how { background: var(--cream); padding: 70px 5%; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 44px; position: relative; }
+    .steps::before { content: ''; position: absolute; top: 30px; left: 10%; width: 80%; height: 2px; background: linear-gradient(90deg, var(--green-bright), var(--gold)); opacity: 0.3; }
+    .step { text-align: center; padding: 0 16px; }
+    .step-num { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--green-dark), var(--green-mid)); color: #fff; font-family: 'Teko', sans-serif; font-size: 1.7rem; font-weight: 700; display: grid; place-items: center; margin: 0 auto 18px; box-shadow: 0 4px 16px rgba(10,74,30,0.3); position: relative; z-index: 1; }
+    .step h4 { font-family: 'Teko', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+    .step p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* FAQ */
+    .faq { background: var(--off-white); padding: 70px 5%; }
+    .faq-list { max-width: 680px; margin: 40px auto 0; }
+    .faq-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 18px 0; font-family: 'Mulish', sans-serif; font-size: 0.97rem; font-weight: 700; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { color: var(--green-mid); }
+    .faq-arrow { font-size: 1.2rem; transition: transform 0.3s; flex-shrink: 0; color: var(--green-mid); }
+    .faq-item.open .faq-arrow { transform: rotate(90deg); }
+    .faq-a { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding-bottom 0.3s; }
+    .faq-item.open .faq-a { max-height: 200px; padding-bottom: 16px; }
+
+    /* FINAL CTA */
+    .final-cta { background: linear-gradient(135deg, var(--green-dark) 0%, #0d5c22 100%); padding: 70px 5%; text-align: center; }
+    .final-cta h2 { font-family: 'Teko', sans-serif; font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 700; color: #fff; margin-bottom: 12px; line-height: 1.05; }
+    .final-cta h2 .gold { color: var(--gold); }
+    .final-cta p { font-size: 1rem; color: rgba(255,255,255,0.75); max-width: 460px; margin: 0 auto 32px; line-height: 1.6; }
+    .final-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    footer { background: var(--green-dark); color: rgba(255,255,255,0.55); text-align: center; padding: 24px 5%; font-size: 0.82rem; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* FLOATING BUTTONS */
+    .float-wa { position: fixed; bottom: 24px; right: 24px; z-index: 500; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+    .float-wa-tooltip { background: var(--text-dark); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 5px 12px; border-radius: 50px; white-space: nowrap; opacity: 0; transform: translateX(10px); transition: opacity 0.2s, transform 0.2s; }
+    .float-wa:hover .float-wa-tooltip { opacity: 1; transform: translateX(0); }
+    .float-wa-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--wa-green); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(37,211,102,0.5); text-decoration: none; transition: transform 0.2s; animation: float-bounce 3s ease-in-out infinite; }
+    .float-wa-btn:hover { transform: scale(1.08); }
+    .float-wa-btn svg { width: 28px; height: 28px; fill: #fff; }
+    .float-tg { position: fixed; bottom: 94px; right: 24px; z-index: 500; }
+    .float-tg-btn { width: 50px; height: 50px; border-radius: 50%; background: var(--tg-blue); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(34,158,217,0.5); text-decoration: none; transition: transform 0.2s; }
+    .float-tg-btn:hover { transform: scale(1.08); }
+    .float-tg-btn svg { width: 24px; height: 24px; fill: #fff; }
+    @keyframes float-bounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-6px); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .steps::before { display: none; }
+      .nav-btn span { display: none; }
+      .hero-stats { gap: 20px; }
+      .video-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>100% FREE</span> Cricket Club — Join 10,000+ Fans on WhatsApp &amp; Telegram!
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero">
+    <div class="ball"></div>
+    <div class="nav-logo-text">Cricket<span>Club</span></div>
+  </a>
+  <div class="nav-links">
+    <a class="nav-btn tg" href="https://t.me/+ZSnvaIB2Fn5jOGFl" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.83.941z"/></svg>
+      <span>Telegram</span>
+    </a>
+    <a class="nav-btn wa" href="https://wa.me/919054343447?text=Hi%2C+I+want+to+join+the+free+cricket+club" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span>Join Free</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div>
+    <div class="hero-badge">India's #1 Free Cricket Community</div>
+    <h1>
+      Live The Game.<br/>
+      <span class="accent">Cricket</span>
+      <span class="line2">Every Day.</span>
+    </h1>
+    <p>IPL fever, T20 thrills, live scores, match predictions & passionate fans — all in one free community. Join now!</p>
+    <div class="hero-ctas">
+      <a class="btn-wa" href="https://wa.me/919054343447?text=Hi%2C+I+want+to+join+the+free+cricket+club" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Join Free on WhatsApp
+      </a>
+      <a class="btn-tg" href="https://t.me/+ZSnvaIB2Fn5jOGFl" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.83.941z"/></svg>
+        Join on Telegram
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>10K+</strong><span>Active Members</span></div>
+      <div class="stat"><strong>100%</strong><span>Free Forever</span></div>
+      <div class="stat"><strong>24/7</strong><span>Live Updates</span></div>
+      <div class="stat"><strong>IPL &amp; T20</strong><span>All Formats</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">
+    <span class="ticker-item">IPL 2025 Live Updates</span>
+    <span class="ticker-item">T20 World Cup Predictions</span>
+    <span class="ticker-item">India vs Australia Match Talks</span>
+    <span class="ticker-item">Daily Cricket News</span>
+    <span class="ticker-item">Fantasy Team Tips</span>
+    <span class="ticker-item">Player Stats &amp; Analysis</span>
+    <span class="ticker-item">Free to Join — No Fees</span>
+    <span class="ticker-item">IPL 2025 Live Updates</span>
+    <span class="ticker-item">T20 World Cup Predictions</span>
+    <span class="ticker-item">India vs Australia Match Talks</span>
+    <span class="ticker-item">Daily Cricket News</span>
+    <span class="ticker-item">Fantasy Team Tips</span>
+    <span class="ticker-item">Player Stats &amp; Analysis</span>
+    <span class="ticker-item">Free to Join — No Fees</span>
+  </div>
+</div>
+
+<!-- VIDEO TESTIMONIALS (right after hero) -->
+<section class="videos-section" id="videos">
+  <div style="text-align:center;">
+    <div class="section-label light">Member Stories</div>
+    <div class="section-title light">Real Members, Real <span class="gold">Results</span></div>
+    <p style="color:rgba(255,255,255,0.65); font-size:0.95rem; max-width:500px; margin:0 auto; line-height:1.6;">Watch what our cricket family members say. Click any video to play.</p>
+  </div>
+
+  <div class="video-grid" id="videoGrid"></div>
+
+  <div class="videos-cta">
+    <a class="btn-wa" href="https://wa.me/919054343447?text=Hi%2C+I+want+to+join+the+free+cricket+club" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Join on WhatsApp
+    </a>
+    <a class="btn-tg" href="https://t.me/+ZSnvaIB2Fn5jOGFl" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.83.941z"/></svg>
+      Join on Telegram
+    </a>
+  </div>
+</section>
+
+<!-- WHY JOIN -->
+<section class="why" id="why">
+  <div style="text-align:center; margin-bottom:8px;">
+    <div class="section-label dark">Why Join Us</div>
+    <div class="section-title dark">Everything a Cricket Fan <span class="gold">Needs</span></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🏏</div>
+      <h3>Live Match Updates</h3>
+      <p>Real-time ball-by-ball updates for IPL, T20 Internationals, and Test matches directly on WhatsApp & Telegram.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📊</div>
+      <h3>Expert Analysis</h3>
+      <p>Deep player stats, pitch reports, toss analysis, and winning predictions from experienced cricket minds.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🏆</div>
+      <h3>Fantasy Cricket Tips</h3>
+      <p>Daily Dream11 team suggestions, captain/VC picks, and match-winning strategies to boost your fantasy game.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🎉</div>
+      <h3>100% Free Forever</h3>
+      <p>No subscription, no hidden fees. Join once and enjoy everything free — always.</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:36px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a class="btn-wa" href="https://wa.me/919054343447?text=Hi%2C+I+want+to+join+the+free+cricket+club" target="_blank" rel="noopener" style="display:inline-flex;">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Join on WhatsApp
+    </a>
+    <a class="btn-tg" href="https://t.me/+ZSnvaIB2Fn5jOGFl" target="_blank" rel="noopener" style="display:inline-flex;">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.83.941z"/></svg>
+      Join on Telegram
+    </a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div style="text-align:center;">
+    <div class="section-label dark">Join in 30 Seconds</div>
+    <div class="section-title dark">How to <span class="gold">Get Started</span></div>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Click Join Button</h4>
+      <p>Tap any Join button on this page. Opens WhatsApp or Telegram instantly.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Send a Message</h4>
+      <p>Send a quick "Hi" — our team adds you to the group within minutes.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Start Enjoying</h4>
+      <p>Instantly get live updates, match tips, and join India's biggest cricket fan group.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div style="text-align:center;">
+    <div class="section-label dark">FAQ</div>
+    <div class="section-title dark">Common <span class="gold">Questions</span></div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item open">
+      <button class="faq-q" onclick="toggleFaq(this)">Is joining the cricket club really free? <span class="faq-arrow">›</span></button>
+      <div class="faq-a">Yes, 100% free! No subscription fees, no hidden charges. Everything — live updates, fantasy tips, match analysis — is completely free for all members.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What kind of cricket content do you share? <span class="faq-arrow">›</span></button>
+      <div class="faq-a">Live IPL score updates, T20 and Test match alerts, fantasy cricket team suggestions, player news, pitch reports, match predictions, and post-match analysis for all major cricket events.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How do I join on WhatsApp or Telegram? <span class="faq-arrow">›</span></button>
+      <div class="faq-a">Click any "Join Free" button on this page. It opens WhatsApp or Telegram with a pre-filled message. Send it and our team adds you to the group within minutes!</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I leave the group anytime? <span class="faq-arrow">›</span></button>
+      <div class="faq-a">Yes, absolutely. You can leave the group at any time. No questions asked, no lock-in period.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final-cta">
+  <h2>Ready to Join the <span class="gold">Action?</span></h2>
+  <p>10,000+ fans are already inside. Your seat is waiting — completely free.</p>
+  <div class="final-cta-btns">
+    <a class="btn-wa" href="https://wa.me/919054343447?text=Hi%2C+I+want+to+join+the+free+cricket+club" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Join Free on WhatsApp
+    </a>
+    <a class="btn-tg" href="https://t.me/+ZSnvaIB2Fn5jOGFl" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.83.941z"/></svg>
+      Join Free on Telegram
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Cricket Club India. A free community for cricket lovers across India.</p>
+  <p style="margin-top:6px;">
+    <a href="https://wa.me/919054343447?text=Hi%2C+I+want+to+join+the+free+cricket+club" target="_blank" rel="noopener">WhatsApp</a> &nbsp;|&nbsp;
+    <a href="https://t.me/+ZSnvaIB2Fn5jOGFl" target="_blank" rel="noopener">Telegram</a> &nbsp;|&nbsp;
+    <a href="#hero">Back to Top</a>
+  </p>
+</footer>
+
+<!-- FLOATING TELEGRAM -->
+<div class="float-tg">
+  <a class="float-tg-btn" href="https://t.me/+ZSnvaIB2Fn5jOGFl" target="_blank" rel="noopener" aria-label="Join on Telegram">
+    <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.83.941z"/></svg>
+  </a>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<div class="float-wa">
+  <div class="float-wa-tooltip">Join Free Cricket Club</div>
+  <a class="float-wa-btn" href="https://wa.me/919054343447?text=Hi%2C+I+want+to+join+the+free+cricket+club" target="_blank" rel="noopener" aria-label="Join on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script>
+  // YouTube Shorts data
+  const videos = [
+    { id: 'pNd3L9YLzHY' },
+    { id: 'dgnJh-9yEdI' },
+    { id: 'C3-YYU3_Ijc' },
+    { id: 'Uhswz21pFr4' },
+    { id: 'jASvEfPH_2k' },
+    { id: '5fEex5QFjyc' },
+    { id: 'DDesGcVIf_M' },
+    { id: '-_F9_aRMG5M' }
+  ];
+
+  const grid = document.getElementById('videoGrid');
+
+  const gradients = [
+    'linear-gradient(135deg,#0a2e14,#1a5c30)',
+    'linear-gradient(135deg,#1a0533,#5e0a8a)',
+    'linear-gradient(135deg,#002b5c,#0061c1)',
+    'linear-gradient(135deg,#3d1a00,#b04a00)',
+    'linear-gradient(135deg,#0a2e14,#1db954)',
+    'linear-gradient(135deg,#1a1a00,#5c5c00)',
+    'linear-gradient(135deg,#1a002e,#6a0a8a)',
+    'linear-gradient(135deg,#002b1a,#006147)'
+  ];
+
+  videos.forEach((v, i) => {
+    const youtubeUrl = `https://youtube.com/shorts/${v.id}`;
+
+    const card = document.createElement('a');
+    card.href = youtubeUrl;
+    card.target = '_blank';
+    card.rel = 'noopener';
+    card.className = 'video-card';
+    card.style.textDecoration = 'none';
+    card.style.display = 'block';
+
+    card.innerHTML = `
+      <div class="video-thumb" style="background:${gradients[i % gradients.length]}; position:relative; aspect-ratio:9/16; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;">
+        <div class="play-ring">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+
+        <div style="font-family:'Mulish',sans-serif; font-size:0.75rem; font-weight:700; color:rgba(255,255,255,0.75); text-align:center; letter-spacing:0.05em; padding:0 12px;">
+          WATCH SUCCESS STORY
+        </div>
+
+        <div style="position:absolute; top:10px; left:12px; background:#ff0000; color:#fff; font-size:0.68rem; font-weight:800; padding:3px 9px; border-radius:20px; letter-spacing:0.06em;">
+          YOUTUBE
+        </div>
+
+        <div style="position:absolute; bottom:10px; right:12px; font-family:'Teko',sans-serif; font-size:2.2rem; font-weight:700; color:rgba(255,255,255,0.1); line-height:1;">
+          ${i + 1}
+        </div>
+      </div>
+
+      <div style="padding:10px 14px; background:#fff; display:flex; align-items:center; justify-content:space-between;">
+        <span style="font-size:0.78rem; font-weight:700; color:#0a4a1e;">
+          Video Testimonial #${i + 1}
+        </span>
+
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#ff0000;flex-shrink:0;">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.why-card, .step, .video-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
